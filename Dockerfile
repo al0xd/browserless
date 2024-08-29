@@ -7,8 +7,8 @@ FROM caddy:latest AS caddy
 COPY Caddyfile ./
 
 RUN caddy fmt --overwrite Caddyfile
-
-FROM browserless/chrome:1-chrome-stable
+ARG VERSION=1-chrome-stable
+FROM browserless/chrome:$VERSION
 
 ENV ENABLE_DEBUGGER=false
 ENV DEBUG=browserless:server
