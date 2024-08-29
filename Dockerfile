@@ -13,6 +13,7 @@ FROM browserless/chrome:1-chrome-stable
 ENV ENABLE_DEBUGGER=false
 ENV DEBUG=browserless:server
 ENV PRINT_NETWORK_INFO=false
+ENV TOKEN=$TOKEN
 
 COPY --from=caddy /srv/Caddyfile ./
 
