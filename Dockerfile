@@ -15,6 +15,12 @@ ENV DEBUG=browserless:server
 ENV PRINT_NETWORK_INFO=false
 ENV TOKEN=$TOKEN
 ENV MAX_CONCURRENT_SESSIONS=200
+ENV CONCURRENT=100
+ENV TIMEOUT=60000
+ENV QUEUED=100
+ENV DATA_DIR=/tmp/data
+ENV DOWNLOAD_DIR=/downloads
+ENV MAX_PAYLOAD_SIZE=50mb
 ENV DEFAULT_LAUNCH_ARGS="[\"--no-sandbox\", \
               \"--disable-setuid-sandbox\", \
               \"--disable-dev-shm-usage\", \
